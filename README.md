@@ -29,55 +29,6 @@ SPAudioTruth helps you verify whether an audio file's quality matches its declar
 
 ## Quick Start (Windows)
 
-### Option 1: Portable Release (`.exe`)
 1. Download the latest `SPAudioTruth_v*.zip` from [Releases](https://github.com/SPluzh/SPAudioTruth/releases).
 2. Extract the archive to any folder.
 3. Run `SPAudioTruth.exe` and drag & drop an audio file into the window.
-
-### Option 2: Run from Source
-1. Make sure **Python 3.10+** is installed.
-2. Install the required Python packages:
-   ```bash
-   pip install PySide6 numpy matplotlib
-   ```
-3. Ensure `ffmpeg.exe` and `ffprobe.exe` (and their DLLs) are present in the `bin/` folder.
-4. Launch the application from the repository root:
-   ```bash
-   python -m src.app
-   ```
-   You can also pass a file path directly:
-   ```bash
-   python -m src.app "path/to/audio.mp3"
-   ```
-
----
-
-## Building the Standalone `.exe`
-
-Requires `pyinstaller` (`pip install pyinstaller`):
-
-- Run `_build_/__build.bat` (or `_build_/build_exe.ps1`) to build `_build_/dist/SPAudioTruth/SPAudioTruth.exe`.
-- Run `_build_/__zip_release.bat` to package the build into `_build_/SPAudioTruth_v<version>.zip`.
-
----
-
-## Project Structure
-
-```text
-SPAudioTruth/
-├── bin/                    # Bundled ffmpeg.exe, ffprobe.exe, and runtime DLLs
-├── src/
-│   ├── app.py              # Application entry point
-│   ├── version.txt         # Current application version
-│   ├── core/               # Audio analysis, verdict engine, worker thread, paths
-│   └── ui/                 # PySide6 main window, widgets, plots, and styles
-├── _build_/                # PyInstaller spec and Windows build/release scripts
-├── CHANGELOG.md            # Version history
-└── README.md
-```
-
----
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for version history.
