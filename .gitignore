@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Build & Distribution
+_build_/build/
+_build_/dist/
+*.zip
+*.log
+
+# IDEs & Agents
+.vscode/
+.idea/
+*.swp
+.gemini/
