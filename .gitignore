@@ -22,3 +22,4 @@ _build_/dist/
 .idea/
 *.swp
 .gemini/
+docs/
